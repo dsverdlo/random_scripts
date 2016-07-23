@@ -3,12 +3,12 @@
 /*
  * This PHP file, designed to be retrieved by a CRON task, will shortly log
  * a user into his IRCCLOUD account and get some activity in order to stay
- * connected. This will prevent the free trial from disconnecting the user*.
+ * connected. This will prevent the free trial from disconnecting the user.
  *
  * Requires a creds.php file in same folder with IRCCLOUD account credentials:
  * <?php return array( 'email'=>'a@b.com', 'password'=>'secret' ); ?>
- * 
- * * Not confirmed yet, update soon.
+ *
+ *
  *
  * @author David Sverdlov
  * @date 2016-07-15
