@@ -12,16 +12,16 @@
  *	  the free trial expires after 2 hours of disconnection, every hour, or every
  *	  115 minutes is recommended for the CRON job interval. 
  *
- *	  |---CRON line-------------------------------------------------------------|
- *	  | 0 * * * * wget -qO /dev/null FILELOCATION/irccloud.php					|
- *	  |-------------------------------------------------------------------------|
+ *	  |---CRON line---------------------------------------------------------|
+ *	  | 0 * * * * wget -qO /dev/null FILELOCATION/irccloud.php		|
+ *	  |---------------------------------------------------------------------|
  *
  * 2. In the same directory as where you place this file, another file must be made
  *    with the credentials of your IRCCLOUD account in the following format:
  *
- *	  |---creds.php-------------------------------------------------------------|
- *	  | <?php return array( 'email'=>'a@b.com', 'password'=>'secret' ); ?>		|
- *	  |-------------------------------------------------------------------------|
+ *	  |---creds.php---------------------------------------------------------|
+ *	  | <?php return array( 'email'=>'a@b.com', 'password'=>'secret' ); ?>	|
+ *	  |---------------------------------------------------------------------|
  *
  * 3. If you don't know a good place to set up cron jobs, make a free account at
  *	  000webhost.com. There you can upload this file via the file manager, add
