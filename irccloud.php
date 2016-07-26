@@ -4,18 +4,36 @@
  * This PHP file, designed to be retrieved by a CRON task, will shortly log
  * a user into his IRCCLOUD account and get some activity in order to stay
  * connected. This will prevent the free trial from disconnecting the user.
+ * 
+ * Installation/usage instructions:
+ * --------------------------------
  *
- * Requires a creds.php file in same folder with IRCCLOUD account credentials:
- * <?php return array( 'email'=>'a@b.com', 'password'=>'secret' ); ?>
+ * 1. A CRON job should wget this file so all the functions are executed. Since
+ *	  the free trial expires after 2 hours of disconnection, every hour, or every
+ *	  115 minutes is recommended for the CRON job interval. 
  *
+ *	  |---CRON line-------------------------------------------------------------|
+ *	  | 0 * * * * wget -qO /dev/null FILELOCATION/irccloud.php					|
+ *	  |-------------------------------------------------------------------------|
  *
+ * 2. In the same directory as where you place this file, another file must be made
+ *    with the credentials of your IRCCLOUD account in the following format:
+ *
+ *	  |---creds.php-------------------------------------------------------------|
+ *	  | <?php return array( 'email'=>'a@b.com', 'password'=>'secret' ); ?>		|
+ *	  |-------------------------------------------------------------------------|
+ *
+ * 3. If you don't know a good place to set up cron jobs, make a free account at
+ *	  000webhost.com. There you can upload this file via the file manager, add
+ *	  the creds.php file and set up the cron job line.
  *
  * @author David Sverdlov
  * @date 2016-07-15
  */ 
  
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+ // For debugging purposes:
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'On');
 
 // This function will send a post request to the IRCCLOUD API to retrieve an auth-formtoken.
 // Curl equivalent:
