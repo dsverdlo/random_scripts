@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Adds automation to release page
 // @author       David Sverdlov
-// @match        http://gensvl4002.gen.volvocars.net:8082/*/m2release/
+// @match        http://jenkins.url/here/*/m2release/
 // @grant        none
 // ==/UserScript==
 
