@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Adds some features to the standard Jenkins tool
 // @author       David Sverdlov
-// @match        http://gensvl4002.gen.volvocars.net:8082/*
+// @match        http://jenkins.url/here/*
 // @grant        none
 // ==/UserScript==
 
